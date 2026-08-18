@@ -1,0 +1,63 @@
+{
+  "name": "Amazon Checker API",
+  "brand": "eKYC Pro",
+  "repository": "ekycpro/amazon-account-checker-api",
+  "description": "Synchronous amazon checks using one phone number or email address according to service_type.",
+  "official_site": "https://ekycpro.com",
+  "landing_page": "https://ekycpro.com/tools/amazon",
+  "canonical_docs": "https://docs.ekycpro.com/amazon-number-checker",
+  "base_url": "https://api.ekycpro.com",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "mode": "sync",
+  "endpoints": {
+    "check": {
+      "method": "POST",
+      "path": "/v1/check"
+    },
+    "balance": {
+      "method": "GET",
+      "path": "/v1/balance"
+    }
+  },
+  "products": [
+    {
+      "type": "amazon",
+      "name": "Amazon Checker",
+      "inputKind": "phone",
+      "min_inputs": 1,
+      "max_inputs": 1,
+      "docs_url": "https://docs.ekycpro.com/amazon-number-checker",
+      "fields": [
+        "id",
+        "identifier",
+        "registered",
+        "billed",
+        "cost",
+        "cost_usd"
+      ]
+    },
+    {
+      "type": "amazon_email",
+      "name": "Amazon Email Checker",
+      "inputKind": "email",
+      "min_inputs": 1,
+      "max_inputs": 1,
+      "docs_url": "https://docs.ekycpro.com/amazon-email-checker",
+      "fields": [
+        "id",
+        "identifier",
+        "registered",
+        "billed",
+        "cost",
+        "cost_usd"
+      ]
+    }
+  ],
+  "pricing_url": "https://ekycpro.com/pricing",
+  "maintainer": "eKYC Pro",
+  "license": "MIT",
+  "last_reviewed": "2026-08-18"
+}
